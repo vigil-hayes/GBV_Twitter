@@ -1,0 +1,8 @@
+# End ongoing collection
+0 * * * * cd  /local/share/gbv_twitter/scripts/collect/ && ./kill_ongoing_streams.sh &> /local/share/gbv_twitter/scripts/collect/logs/kill_ongoing_streams.log &
+
+# Start new collection
+0 * * * * cd /local/share/gbv_twitter/scripts/collect/ && ./run_gbv_collection.sh &> /local/share/gbv_twitter/scripts/collect/logs/run_gbv_collection.log &
+
+# Process old collection
+0 * * * * cd /local/share/gbv_twitter/scripts/filter/ && ./filter_tweets.sh &> /local/share/gbv_twitter/scripts/filter/logs/filter_tweets.log &

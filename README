@@ -1,0 +1,42 @@
+COLLECTING TWEETS FOR GEBDER-BASED VIOLENCE
+based on
+COLLECTING TWEETS FROM INDIAN COUNTRY
+=====================================
+Created by: Morgan Vigil
+Partnering with: Mai El-Sheriff
+-------------------------------------
+
+This project uses the Twitter Streaming API in order to collect
+real-time Tweets generated on reservations AND generated with 
+response to critical social media movements.
+
+A cron job collects tweets on the hour and then processes them
+with various filtering methods in order to minimize space used 
+and to maximize meaning of the data collected.
+
+This file is intended to serve as a map for the collection project.
+
+-------------------------------------
+gbv_twitter
+|_scripts
+|_tweets
+-------------------------------------
++++++++++++++++++++++++++++++++++++++
+scripts
++++++++++++++++++++++++++++++++++++++
+Contains all scripts required to collect, filter, and analyze tweets.
+
++++++++++++++++++++++++++++++++++++++
+tweets
++++++++++++++++++++++++++++++++++++++
+Contains tweet files stored in json format. 
+
+Files will be stored in directories
+that are named after the day of collection and the actual file name will contain
+the hour of collection. For example, the tweets collected between 12pm and 13pm on
+Feb. 24, 2016 would be stored as:
+	2016_02_24/tweets_ic_1200.json
+	2016_02_24/tweets_interest_1200.json
+
+
+
